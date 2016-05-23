@@ -51,7 +51,9 @@ module Protobuf
 
       def coerce!(value)
         case value
-        when String, Symbol
+        when String
+          value
+        when Symbol
           "#{value}"
         when NilClass
           nil
